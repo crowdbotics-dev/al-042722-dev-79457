@@ -56,6 +56,7 @@ const getStore = globalState => {
 const App = () => {
   const global = useContext(GlobalOptionsContext);
   const Navigation = getNavigation(modules, screens, initialRoute);
+  console.log("global",global);
   const store = getStore(global);
   let effects = {};
   hooks.map(hook => {
