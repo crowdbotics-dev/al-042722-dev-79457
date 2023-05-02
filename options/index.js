@@ -13,5 +13,6 @@ export function getOptions(pakage) {
 export function getGlobalOptions() {
   return globalOptions;
 }
+console.log("GlobalOptions", globalOptions);
 export const OptionsContext = React.createContext(options);
 export const GlobalOptionsContext = React.createContext(globalOptions);
