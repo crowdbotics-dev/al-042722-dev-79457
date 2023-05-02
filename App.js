@@ -39,6 +39,8 @@ const getNavigation = (modules, screens, initialRoute) => {
 };
 
 const getStore = globalState => {
+  console.log("globalState",globalState);
+  console.log(reducers, connectors);
   const appReducer = createReducer(globalState, _ => {
     return globalState;
   });
@@ -56,7 +58,6 @@ const getStore = globalState => {
 const App = () => {
   const global = useContext(GlobalOptionsContext);
   const Navigation = getNavigation(modules, screens, initialRoute);
-  console.log("GlobalOptionsContext", GlobalOptionsContext);
   const store = getStore(global);
   let effects = {};
   hooks.map(hook => {
