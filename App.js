@@ -56,7 +56,7 @@ const getStore = globalState => {
 };
 
 const App = () => {
-  const global = useContext(GlobalOptionsContext);
+  const global = useContext(undefined);
   const Navigation = getNavigation(modules, screens, initialRoute);
   const store = getStore(global);
   let effects = {};
