@@ -8,7 +8,7 @@ import { screens } from "@screens";
 import { modules, reducers, hooks, initialRoute } from "@modules";
 import { connectors } from "@store";
 const Stack = createStackNavigator();
-import { GlobalOptionsContext, OptionsContext, getOptions } from "@options";
+import { OptionsContext, getOptions } from "@options";
 
 const getNavigation = (modules, screens, initialRoute) => {
   const Navigation = () => {
@@ -39,7 +39,7 @@ const getNavigation = (modules, screens, initialRoute) => {
 };
 
 const getStore = globalState => {
-  console.log("globalState",globalState);
+  console.log("globalState", globalState);
   console.log(reducers, connectors);
   const appReducer = createReducer(globalState, _ => {
     return globalState;
